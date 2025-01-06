@@ -6,11 +6,11 @@ def load_csv_to_postgres(csv_file, table_name):
     conn.commit()
 # 数据库连接信息
 conn = psycopg2.connect(
-    dbname="sample",
-    user="metabase",
-    password="metasample123",
-    host="172.17.1.220",
-    port="5436"
+    dbname="postgres",
+    user="postgres",
+    password="postgres",
+    host="localhost",
+    port="5432"
 )
 cur = conn.cursor()
 # 设置 search_path 
