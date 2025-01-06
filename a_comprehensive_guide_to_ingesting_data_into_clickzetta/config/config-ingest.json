@@ -1,0 +1,15 @@
+{
+  "username": "qiliang",
+  "password": "Ql123456!",
+  "service": "uat-api.clickzetta.com",
+  "instance": "jnsxwfyr",
+  "workspace": "ql_ws",
+  "schema": "ingest",
+  "vcluster": "ingest",
+  "sdk_job_timeout": 10,
+  "hints": {
+    "sdk.job.timeout": 3,
+    "query_tag": "test_conn_hints_zettapark"
+  }
+}
+
