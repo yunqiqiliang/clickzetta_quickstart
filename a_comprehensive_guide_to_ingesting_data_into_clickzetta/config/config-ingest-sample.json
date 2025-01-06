@@ -1,11 +1,11 @@
 {
-  "username": "",
-  "password": "",
-  "service": "pi.clickzetta.com",
-  "instance": "",
-  "workspace": "",
-  "schema": "",
-  "vcluster": "",
+  "username": "请输入您的用户名",
+  "password": "请输入您的密码",
+  "service": "请输入您的服务地址，例如 api.clickzetta.com",
+  "instance": "请输入您的实例 ID",
+  "workspace": "请输入您的工作空间，例如 gharchive",
+  "schema": "请输入您的模式，例如 public",
+  "vcluster": "请输入您的虚拟集群，例如 default_ap",
   "sdk_job_timeout": 10,
   "hints": {
     "sdk.job.timeout": 3,
