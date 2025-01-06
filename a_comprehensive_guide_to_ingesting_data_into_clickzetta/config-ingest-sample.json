@@ -1,0 +1,15 @@
+{
+  "username": "",
+  "password": "!",
+  "service": "pi.clickzetta.com",
+  "instance": "",
+  "workspace": "",
+  "schema": "",
+  "vcluster": "",
+  "sdk_job_timeout": 10,
+  "hints": {
+    "sdk.job.timeout": 3,
+    "query_tag": "a_comprehensive_guide_to_ingesting_data_into_clickzetta"
+  }
+}
+
