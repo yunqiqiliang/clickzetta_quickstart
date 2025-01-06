@@ -22,11 +22,11 @@ resorts = ["大董烤鸭", "京雅堂", "新荣记", "仿膳饭庄", "全聚德"
            "绿波廊", "南美时光"]
 
 # Load database credentials from environment variables
-DB_NAME = 'sample'
-DB_USER = 'metabase'
-DB_PASSWORD = 'metasample123'
-DB_HOST = '172.17.1.220'
-DB_PORT = '5436'
+DB_NAME = 'postgres'
+DB_USER = 'postgres'
+DB_PASSWORD = 'postgres'
+DB_HOST = 'localhost'
+DB_PORT = '5432'
 
 def connect_db():
     conn = psycopg2.connect(
