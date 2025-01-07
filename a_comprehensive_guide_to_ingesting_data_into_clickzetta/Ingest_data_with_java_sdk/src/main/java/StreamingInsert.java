@@ -62,7 +62,7 @@ public class StreamingInsert {
         checkAndCreateTable(url);
 
         realtimeStream = client.newRealtimeStreamBuilder()
-                .operate(RowStream.RealTimeOperate.APPEND_ONLY)
+                .operate(RowStream.RealTimeOperate.CDC)
                 .options(options)
                 .schema(schema)
                 .table(table)
@@ -82,7 +82,7 @@ public class StreamingInsert {
 
         while (duration > 0) {
             for (int t = 1; t < 11; t++) {
-                Row row = realtimeStream.createRow(Stream.Operator.INSERT);
+                Row row = realtimeStream.createRow(Stream.Operator.UPSERT);
                 row.setValue("txid", UUID.randomUUID().toString());
                 row.setValue("rfid", Long.toHexString(random.nextLong() & ((1L << 96) - 1)));
                 row.setValue("resort", faker.options().option(resorts));
@@ -138,7 +138,7 @@ public class StreamingInsert {
     private static void checkAndCreateTable(String url) throws Exception {
         String checkTableSQL = "SELECT 1 FROM " + schema + "." + table + " LIMIT 1";
         String createTableSQL = "CREATE TABLE if not exists " + table + " (" +
-                "`txid` string," +
+                "`txid` string PRIMARY KEY," +
                 "`rfid` string," +
                 "`resort` string," +
                 "`purchase_time` string," +
