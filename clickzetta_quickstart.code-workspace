@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "a_comprehensive_guide_to_ingesting_data_into_clickzetta"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic",
+		"java.debug.settings.onBuildFailureProceed": true
+	}
+}
