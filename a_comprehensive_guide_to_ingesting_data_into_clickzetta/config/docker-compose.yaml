@@ -14,3 +14,24 @@ services:
       - "wal_level=logical"
     volumes:
       - ./postgres-data:/var/lib/postgresql/data
+  kafka:
+    image: 'bitnami/kafka:latest'
+    container_name: kafka
+    ports:
+      - "9093:9093"
+    expose:
+      - "9093"
+    environment:
+      - KAFKA_CREATE_TOPICS="clickzettalakehouserealtimeingest:1:1"
+      - KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE=true
+      - KAFKA_CFG_NODE_ID=0
+      - KAFKA_CFG_PROCESS_ROLES=controller,broker
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CLIENT:PLAINTEXT,EXTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT
+      - KAFKA_CFG_LISTENERS=CLIENT://:9092,EXTERNAL://:9093,CONTROLLER://:9094
+      - KAFKA_CFG_ADVERTISED_LISTENERS=CLIENT://kafka:9092,EXTERNAL://localhost:9093
+      - KAFKA_INTER_BROKER_LISTENER_NAME=CLIENT
+      - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=0@localhost:9094
+      - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
+    volumes:
+      - ./bitnami/kafka:/bitnami/kafka
