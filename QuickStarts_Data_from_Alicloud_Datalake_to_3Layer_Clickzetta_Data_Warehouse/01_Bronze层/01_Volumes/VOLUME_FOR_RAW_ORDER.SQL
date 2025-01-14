@@ -5,7 +5,7 @@ USE SCHEMA Three_Layer_DWH_SCH;
 
 --创建Volume,数据湖存储文件的位置
 CREATE EXTERNAL VOLUME  if not exists VOLUME_FOR_RAW_ORDER
-  LOCATION 'oss://czsampledatahz/VOLUME_FOR_RAW_ORDER' 
+  LOCATION 'oss://yourbucketname/VOLUME_FOR_RAW_ORDER' 
   USING connection hz_ingestion_demo  -- storage Connection
   DIRECTORY = (
     enable = TRUE
