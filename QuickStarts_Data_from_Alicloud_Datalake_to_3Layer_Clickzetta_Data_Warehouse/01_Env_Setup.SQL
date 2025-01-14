@@ -1,0 +1,16 @@
+-- virtual cluster for Tree_Layer_DW 
+-- DROP VCLUSTER IF EXISTS Three_Layer_DWH_VC;
+-- DROP SCHEMA IF EXISTS Three_Layer_DWH_SCH;
+CREATE VCLUSTER IF NOT EXISTS Three_Layer_DWH_VC
+   VCLUSTER_SIZE = XSMALL
+   VCLUSTER_TYPE = GENERAL
+   AUTO_SUSPEND_IN_SECOND = 60
+   AUTO_RESUME = TRUE
+   COMMENT  'virtual cluster for Three_Layer_DWH';
+
+-- Use our VCLUSTER
+USE VCLUSTER Three_Layer_DWH_VC;
+
+-- Create and Use SCHEMA
+CREATE SCHEMA IF NOT EXISTS  Three_Layer_DWH_SCH;
+USE SCHEMA Three_Layer_DWH_SCH;

@@ -1,0 +1,20 @@
+CREATE OR       
+REPLACE DYNAMIC TABLE `three_layer_dwh_sch`.`dt_productanalysis` (
+`CATEGORY`,
+`GENDER`,
+`TOTAL_SALES`,
+`AVG_RATING`
+)
+REFRESH   INTERVAL 1 MINUTE VCLUSTER THREE_LAYER_DWH_VC AS (
+SELECT    p.CATEGORY,
+          c.GENDER,
+          SUM(o.TOTAL_AMOUNT) AS TOTAL_SALES,
+          AVG(p.RATING) AS AVG_RATING
+FROM      SILVER_ORDERS AS o
+JOIN      SILVER_PRODUCT AS p ON o.product_id = p.product_id
+JOIN      SILVER_CUSTOMER AS c ON o.customer_id = c.customer_id
+GROUP BY  P.CATEGORY,
+          C.GENDER
+ORDER BY  c.GENDER,
+          TOTAL_SALES DESC
+);
