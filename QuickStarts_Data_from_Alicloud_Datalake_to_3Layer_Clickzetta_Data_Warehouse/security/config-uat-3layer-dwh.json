@@ -1,0 +1,15 @@
+{
+  "username": "请输入你的用户名",
+  "password": "请输入你的密码",
+  "service": "请输入你的服务地址",
+  "instance": "请输入你的实例",
+  "workspace": "请输入你的工作区",
+  "schema": "Three_Layer_DWH_SCH",
+  "vcluster": "Three_Layer_DWH_VC",
+  "sdk_job_timeout": 10,
+  "hints": {
+    "sdk.job.timeout": 3,
+    "query_tag": "test_conn_hints_3layer_dwh"
+  }
+}
+
