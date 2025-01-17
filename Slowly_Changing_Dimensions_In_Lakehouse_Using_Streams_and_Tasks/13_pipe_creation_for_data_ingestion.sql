@@ -43,6 +43,6 @@ SHOW JOBS IN VCLUSTER SCD_VC WHERE QUERY_TAG="pipe.ql_ws.scd_sch.volume_pipe_scd
 
 
 -- 查看copy作业导入的历史文件
-select * from load_history('scd_sch.customer_raw');
+SELECT * FROM load_history('scd_sch.customer_raw');
 
 
