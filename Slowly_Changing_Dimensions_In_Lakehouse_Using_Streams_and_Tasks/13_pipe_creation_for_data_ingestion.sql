@@ -6,7 +6,7 @@
 USE VCLUSTER SCD_VC;
 USE SCHEMA SCD_SCH;
 
-create pipe volume_pipe_cdc_demo
+create pipe volume_pipe_scd_demo
   VIRTUAL_CLUSTER = 'scd_vc'
   --执行获取最新文件使用扫描文件模式
   INGEST_MODE = 'LIST_PURGE'
@@ -27,6 +27,22 @@ purge=true
 ;
 
 show pipes;
-DESC PIPE volume_pipe_cdc_demo;
+
+DESC PIPE volume_pipe_scd_demo;
+
+-- 暂停和启动PIPE
+-- 暂停
+ALTER pipe volume_pipe_scd_demo SET PIPE_EXECUTION_PAUSED = true;
+-- 启动
+ALTER pipe volume_pipe_scd_demo SET PIPE_EXECUTION_PAUSED = false;
+
+
+
+-- 查看pipe copy作业执行情况
+SHOW JOBS IN VCLUSTER SCD_VC WHERE QUERY_TAG="pipe.ql_ws.scd_sch.volume_pipe_scd_demo" LIMIT 10;
+
+
+-- 查看copy作业导入的历史文件
+select * from load_history('scd_sch.customer_raw');
 
 
