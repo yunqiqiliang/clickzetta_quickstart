@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "a_comprehensive_guide_to_ingesting_data_into_clickzetta"
+		},
+		{
+			"path": "../../../data_engineering_best_practices"
 		}
 	],
 	"settings": {
