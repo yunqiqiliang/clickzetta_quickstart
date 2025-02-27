@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../../../data_engineering_best_practices"
+		},
+		{
+			"path": "End-to-End-Cricket-Analytics-Data-Engineering-Project"
 		}
 	],
 	"settings": {

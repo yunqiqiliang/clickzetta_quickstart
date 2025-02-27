@@ -1,0 +1,14 @@
+{
+  "username": "<username>",
+  "password": "<password>",
+  "service": "<service url>",
+  "instance": "<instance id>",
+  "workspace": "<workspace>",
+  "schema": "<schema>",
+  "vcluster": "<vcluster>",
+  "sdk_job_timeout": 60,
+  "hints": {
+    "sdk.job.timeout": 60,
+    "query_tag": "test_zettapark_credit_scoring"
+  }
+}

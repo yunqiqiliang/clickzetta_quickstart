@@ -21,3 +21,5 @@ WITH
 --********************************************************************--
 -- check total streams
 SHOW TABLE STREAMS;
+
+GRANT ALL PRIVILEGES ON `yuxing`.* TO `metabase`@`%`;
