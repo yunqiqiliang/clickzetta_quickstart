@@ -1,0 +1,14 @@
+{
+    "username": "Please enter your username",
+    "password": "Please enter your password",
+    "service": "Please enter your service address, e.g. api.clickzetta.com",
+    "instance": "Please enter your instance ID",
+    "workspace": "Please enter your workspace, e.g. gharchive",
+    "schema": "Please enter your schema, e.g. public",
+    "vcluster": "Please enter your virtual cluster, e.g. default_ap",
+    "sdk_job_timeout": 10,
+    "hints": {
+      "sdk.job.timeout": 3,
+      "query_tag": "Introduction to Zettapark for Python"
+    }
+  }
