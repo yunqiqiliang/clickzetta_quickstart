@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error>
+  <Code>NoSuchKey</Code>
+  <Message>The specified key does not exist.</Message>
+  <RequestId>6820C7B929FE36363097C5A1</RequestId>
+  <HostId>cz-lh-sh-system-prod.oss-cn-shanghai.aliyuncs.com</HostId>
+  <Key>270397/workspaces/quick_start_3974371339741475209/internal_volume/user_4534836166332068813/image1/files_in_s3_dir2.png</Key>
+  <EC>0026-00000001</EC>
+  <RecommendDoc>https://api.aliyun.com/troubleshoot?q=0026-00000001</RecommendDoc>
+</Error>
